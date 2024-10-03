@@ -1,5 +1,5 @@
-import Especificacoes from "./produto/Especificacoes";
-import Precificavel from "./produto/Precificavel";
-import Produto from "./produto/Produto";
+import Especificacoes from "./Especificacoes";
+import Precificavel from "./Precificavel";
+import Produto from "./Produto";
 
 export type { Especificacoes, Precificavel, Produto }
