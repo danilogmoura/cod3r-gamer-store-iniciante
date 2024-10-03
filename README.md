@@ -1,6 +1,6 @@
 # Projeto de E-commerce
 
-Este projeto faz parte da trilha para iniciantes da **Cod3r** em sua [Formação Dev Full Stack](https://escola.formacao.dev/)., com o objetivo de desenvolver uma aplicação completa de e-commerce. Durante esse processo, vamos utilizar diversas tecnologias para construir uma aplicação web moderna e escalável.
+Este projeto faz parte da trilha para iniciantes da **Cod3r** em sua [Formação Dev Full Stack](https://escola.formacao.dev/), com o objetivo de desenvolver uma aplicação completa de e-commerce. Durante esse processo, vamos utilizar diversas tecnologias para construir uma aplicação web moderna e escalável.
 
 ## Tecnologias
 
