@@ -1,20 +1,29 @@
-import { Controller, Get, Param } from '@nestjs/common';
-import { Produto, produtos } from 'src/core'
+import { Body, Controller, Get, Param, Post, Delete } from '@nestjs/common';
+import { ProdutoPrisma } from './produto.prisma';
+import { Produto } from '@prisma/client';
 
 @Controller('produtos')
 export class ProdutoController {
 
+    constructor(readonly repo: ProdutoPrisma) { }
+
     @Get()
     async listar(): Promise<Produto[]> {
-        return produtos.map((produto) => ({
-            ...produto,
-            especificacoes: { destaque: produto.especificacoes.destaque },
-        }));
+        return this.repo.listar()
     }
 
     @Get(":id")
     async buscarPorId(@Param("id") id: string): Promise<Produto | null> {
-        const produto = produtos.find(produto => produto.id === +id)
-        return produto ?? null
+        return this.repo.buscaPorId(+id)
+    }
+
+    @Post()
+    async salvar(@Body() produto: Produto): Promise<void> {
+        return this.repo.salvar(produto)
+    }
+
+    @Delete(":id")
+    async excluir(@Param("id") id: string): Promise<void> {
+        return this.repo.excluir(+id)
     }
 }
