@@ -13,7 +13,7 @@ export class ProdutoController {
     }
 
     @Get(":id")
-    async buscar(@Param("id") id: string): Promise<Produto | null> {
+    async buscarPorId(@Param("id") id: string): Promise<Produto | null> {
         const produto = produtos.find(produto => produto.id === +id)
         return produto ?? null
     }
