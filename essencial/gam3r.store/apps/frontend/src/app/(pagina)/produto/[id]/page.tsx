@@ -6,6 +6,9 @@ import TituloProduto from '@/components/produto/TituloProduto'
 import InformacoesProduto from '@/components/produto/InformacoesProduto'
 import ProdutoNaoEncontrado from '@/components/produto/ProdutoNaoEncontrado'
 import BannerCompra from '@/components/produto/BannerCompra'
+import MedidorDePreco from '@/components/produto/MedidorDePreco'
+import AvaliacoesUsuarios from '@/components/produto/AvaliacoesUsuarios'
+import AvaliacaoEspecializada from '@/components/produto/AvaliacaoEspecializada'
 
 export default function PaginaProduto(props: any) {
     const { buscarPorId } = useProdutos()
@@ -21,7 +24,10 @@ export default function PaginaProduto(props: any) {
                 <TituloProduto produto={produto} />
                 <InformacoesProduto produto={produto} />
                 <BannerCompra produto={produto} />
+                <MedidorDePreco produto={produto} />
             </div>
+            <AvaliacoesUsuarios produto={produto} />
+            <AvaliacaoEspecializada produto={produto} />
         </div>
     ) : (<ProdutoNaoEncontrado />)
 }
