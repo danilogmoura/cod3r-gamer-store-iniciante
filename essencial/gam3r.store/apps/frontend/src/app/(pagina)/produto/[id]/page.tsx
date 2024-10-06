@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import TituloProduto from '@/components/produto/TituloProduto'
 import InformacoesProduto from '@/components/produto/InformacoesProduto'
 import ProdutoNaoEncontrado from '@/components/produto/ProdutoNaoEncontrado'
+import BannerCompra from '@/components/produto/BannerCompra'
 
 export default function PaginaProduto(props: any) {
     const { buscarPorId } = useProdutos()
@@ -19,6 +20,7 @@ export default function PaginaProduto(props: any) {
             <div className="flex flex-col gap-10">
                 <TituloProduto produto={produto} />
                 <InformacoesProduto produto={produto} />
+                <BannerCompra produto={produto} />
             </div>
         </div>
     ) : (<ProdutoNaoEncontrado />)
