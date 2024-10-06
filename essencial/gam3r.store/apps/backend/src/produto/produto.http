@@ -1,0 +1,34 @@
+GET http://localhost:3005/produtos
+
+###
+GET http://localhost:3005/produtos/29
+
+###
+DELETE http://localhost:3005/produtos/29
+
+###
+POST http://localhost:3005/produtos
+Content-Type: application/json
+
+{
+    "nome": "iPhone 14 Pro Max",
+    "descricao": "O iPhone 14 Pro Max é o mais recente smartphone da Apple, com uma tela de 6.7 polegadas e câmera tripla.",
+    "marca": "Apple",
+    "modelo": "iPhone 14 Pro Max",
+    "imagem": "https://apple.com/imagem.jpg",
+    "nota": 4.9,
+    "videoReview": "https://www.youtube.com/",
+    "tags": ["smartphone", "apple", "premium"],
+    "precoBase": 12000.00,
+    "precoPromocional": 11000.00,
+    "menorPreco": 10000.00,
+    "maiorPreco": 13000.00,
+    "precoMedio": 11500.00,
+    "especificacoes": {
+        "Tela": "6.7 polegadas",
+        "Memória": "6 GB",
+        "Armazenamento": "256 GB",
+        "Câmera": "12 MP tripla",
+        "Bateria": "4500 mAh"
+    }
+}
